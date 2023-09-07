@@ -15,6 +15,7 @@ driver.get("https://www.google.com");
  WebElement gmail=driver.findElement(By.xpath("//a[@class='gb_y']"));
  Actions act=new Actions(driver);
  act.moveToElement(gmail).contextClick().perform();
+		System.out.println("welcome")
 	}
 
 }
