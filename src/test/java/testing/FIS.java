@@ -16,6 +16,7 @@ public class FIS {
  p.load(jse);
  String s= p.getProperty("URL");
  System.out.println(s);
+		System.out.println("srinu");
  
 	}
 	
