@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Portfolio - Software Test Engineer</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://example.com/testing-theme-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            overflow-x: hidden;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            font-weight: bold;
+            animation: float 3s infinite;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin: 0.5rem 0 0;
+            font-style: italic;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: rgba(61, 118, 183, 0.9);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            padding: 1rem;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background: rgba(69, 39, 160, 0.8);
+        }
+        section {
+            padding: 2rem;
+            margin: auto;
+            max-width: 900px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        section h2 {
+            font-size: 2rem;
+            color: #007BFF;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            animation: float 3s infinite;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .skill-card {
+            background: #e1bee7;
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(33.333% - 2rem);
+            box-sizing: border-box;
+            transition: transform 0.3s, background 0.3s;
+        }
+        .skill-card:hover {
+            transform: scale(1.05);
+            background: #d1c4e9;
+        }
+        .moving-element {
+            position: absolute;
+            top: 20%;
+            left: -50px;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #ff6b6b, #fbc02d);
+            border-radius: 50%;
+            animation: float 6s infinite;
+            opacity: 0.8;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const skills = [
+                { category: "Testing ", skills: "Manual" },
+                { category: "Automation", skills: "Selenium WebDriver, TestNG, Postman" },
+                { category: "Programming", skills: "Java (Basic)" }
+            ];
+
+            const skillsContainer = document.getElementById("dynamic-skills");
+            skills.forEach(skill => {
+                const skillCard = document.createElement("div");
+                skillCard.className = "skill-card";
+                skillCard.innerHTML = `
+                    <h3>${skill.category}</h3>
+                    <p>${skill.skills}</p>
+                `;
+                skillsContainer.appendChild(skillCard);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="moving-element"></div>
+    <header>
+        <h1> Portfolio of Modala Srinu</h1>
+        <p>Software Test Engineer | Manual and Automation Testing Enthusiast</p>
+    </header>
+    
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a detail-oriented Software Test Engineer passionate about ensuring software quality and reliability. My goal is to contribute to the development of robust software solutions through meticulous testing and collaboration.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div id="dynamic-skills" class="skills"></div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="card">
+                <h3>Project : i Dent Aligners</h3>
+                <p><strong>Description:</strong> The objective of the Healthcare Management System project is to create a comprehensive platform that facilitates efficient management of healthcare facilities, ensuring seamless communication and collaboration among super administrators, administrators, and staff.</p>
+                <p><strong>Tools Used:</strong> Bug Tracking,GoogleSheet,Excel</p>
+                <p><strong>Team Size:</strong> 8</p>
+                <p><strong>Role/Position:</strong> Software Tester</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <div class="certifications">
+            <div class="card">
+                <h3>Certified Software Tester</h3>
+                <p>Issued by Magneq Software</p>
+            </div>
+            <div class="card">
+                <h3>Automation Testing with Selenium</h3>
+                <p>Issued by Magneq Software</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: srinumodala11@gmail.com</p>
+        <p>Phone: 8374116534</p>
+        <p>LinkedIn: <a href="[Your LinkedIn URL]">https://www.linkedin.com/in/modhala-srinu-3bb033257/</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 [Modala Srinu]. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
